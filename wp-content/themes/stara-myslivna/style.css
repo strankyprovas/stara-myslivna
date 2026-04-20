@@ -1195,6 +1195,12 @@ hr { border: 0; border-top: 1px solid #c9b88a; margin: 10px 0; }
   .photo-gallery .gallery-item img {
     height: 140px;
   }
+  .entry-content .gallery {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .entry-content .gallery-icon img {
+    height: 160px !important;
+  }
 
   /* Home dlaždice */
   .home-tiles-grid {
@@ -1251,7 +1257,48 @@ hr { border: 0; border-top: 1px solid #c9b88a; margin: 10px 0; }
   }
 }
 
-/* ===== PHOTO GALLERY ===== */
+/* ===== WORDPRESS GALLERY (shortcode [gallery]) ===== */
+.entry-content .gallery {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 8px !important;
+    margin: 14px 0 !important;
+    clear: both;
+}
+.entry-content .gallery br { display: none; }
+.entry-content .gallery-item {
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    float: none !important;
+    text-align: center;
+    overflow: hidden;
+    border: 1px solid #c9b88a;
+    background: #fff;
+}
+.entry-content .gallery-icon {
+    margin: 0 !important;
+}
+.entry-content .gallery-icon img {
+    width: 100% !important;
+    height: 200px !important;
+    object-fit: cover !important;
+    display: block;
+    border: none !important;
+    transition: opacity 0.15s;
+}
+.entry-content .gallery-item:hover img {
+    opacity: 0.9;
+}
+.entry-content .gallery-caption {
+    padding: 4px 6px;
+    font-size: 11px;
+    color: #5a4a3a;
+    background: #fff;
+    margin: 0 !important;
+}
+
+/* ===== PHOTO GALLERY (custom) ===== */
 .photo-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
