@@ -30,7 +30,7 @@
                 ['img' => $tpl.'/stara-myslivna-uvod-web-oburka.webp',          'label' => 'Obůrka',                 'url' => home_url('/o-restauraci/oburka/')],
                 ['img' => $tpl.'/stara-myslivna-uvod-web-lovecka-chata.webp',   'label' => 'Lovecká chata',          'url' => home_url('/sluzby/lovecka-chata/')],
                 ['img' => $tpl.'/stara-myslivna-uvod-web-orchestrion.webp',     'label' => 'Orchestrion',            'url' => home_url('/akce/orchestrion/')],
-                ['img' => $tpl.'/stara-myslivna-uvod-web-svhubert.webp',        'label' => 'Benedikace Sv. Huberta', 'url' => home_url('/akce/benedikace/')],
+                ['img' => $tpl.'/stara-myslivna-uvod-web-svhubert.webp',        'label' => 'Svatý Hubert',           'url' => home_url('/o-restauraci/zajimavosti/')],
                 ['img' => $tpl.'/stara-myslivna-uvod-web-svatby.webp',          'label' => 'Svatby na myslivně',     'url' => home_url('/sluzby/svatby/')],
                 ['img' => $tpl.'/stara-myslivna-uvod-web-historicka-svatba.webp','label' => 'Historická svatba',     'url' => home_url('/akce/historicka-svatba/')],
             ];
