@@ -24,16 +24,15 @@
 
             <!-- FOTO DLAŽDICE – proklik do sekcí (per Kuchařka + layout klienta) -->
             <?php
-            // Homepage dlaždice dle layoutu PDF klienta (22.4.2026 - Layout Úvod O restauraci)
             $tiles = [
-                ['img' => $tpl.'/stara-myslivna-uvod-web-interier.webp',         'label' => 'Interiér',     'url' => home_url('/o-restauraci/interier/')],
-                ['img' => $tpl.'/stara-myslivna-uvod-web-exterier.webp',         'label' => 'Exteriér',     'url' => home_url('/o-restauraci/exterier/')],
-                ['img' => $tpl.'/stara-myslivna-uvod-web-oburka.webp',           'label' => 'Obůrka',       'url' => home_url('/o-restauraci/oburka/')],
-                ['img' => $tpl.'/stara-myslivna-zajimavosti-orchestrion.webp',   'label' => 'Zajímavosti',  'url' => home_url('/o-restauraci/zajimavosti/')],
-                ['img' => $tpl.'/stara-myslivna-sefkuchari-uvod.webp',           'label' => 'Šéfkuchaři',   'url' => home_url('/o-restauraci/sefkuchari/')],
-                ['img' => $tpl.'/videa_stab.jpg',                                'label' => 'Videa',        'url' => home_url('/o-restauraci/videa/')],
-                ['img' => $tpl.'/publicita_apetit.jpg',                          'label' => 'Publicita',    'url' => home_url('/o-restauraci/publicita/')],
-                ['img' => $tpl.'/stara-myslivna-igc-restaurace-01.webp',         'label' => 'IGC',          'url' => home_url('/o-restauraci/igc/')],
+                ['img' => $tpl.'/stara-myslivna-uvod-web-interier.webp',         'label' => 'Interiér',               'url' => home_url('/o-restauraci/interier/')],
+                ['img' => $tpl.'/stara-myslivna-uvod-web-exterier.webp',        'label' => 'Exteriér',               'url' => home_url('/o-restauraci/exterier/')],
+                ['img' => $tpl.'/stara-myslivna-uvod-web-oburka.webp',          'label' => 'Obůrka',                 'url' => home_url('/o-restauraci/oburka/')],
+                ['img' => $tpl.'/stara-myslivna-uvod-web-lovecka-chata.webp',   'label' => 'Lovecká chata',          'url' => home_url('/sluzby/lovecka-chata/')],
+                ['img' => $tpl.'/stara-myslivna-uvod-web-orchestrion.webp',     'label' => 'Orchestrion',            'url' => home_url('/akce/orchestrion/')],
+                ['img' => $tpl.'/stara-myslivna-uvod-web-svhubert.webp',        'label' => 'Svatý Hubert',           'url' => home_url('/o-restauraci/zajimavosti/')],
+                ['img' => $tpl.'/stara-myslivna-uvod-web-svatby.webp',          'label' => 'Svatby na myslivně',     'url' => home_url('/sluzby/svatby/')],
+                ['img' => $tpl.'/stara-myslivna-uvod-web-historicka-svatba.webp','label' => 'Historická svatba',     'url' => home_url('/akce/historicka-svatba/')],
             ];
             ?>
 
