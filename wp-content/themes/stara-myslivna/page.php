@@ -47,7 +47,7 @@
                     'expo'                => 'stara-myslivna-expo-shanghai-china-uvod.webp',
                     'shop'                => 'stara-myslivna-shop-souvenirs-uvod.webp',
                     'souvenirs'           => 'stara-myslivna-shop-souvenirs-uvod.webp',
-                    'postcard'            => 'stara-myslivna-shop-postcard-uvod.webp',
+                    'postcard'            => 'postcard_kolaz.jpg',
                     'karty'               => 'stara-myslivna-karty-uvod.webp',
                     'darkove-poukazy'     => 'stara-myslivna-vouchery-uvod.webp',
                     'plysaci'             => 'stara-myslivna-shop-plysaci-veverka.webp',
