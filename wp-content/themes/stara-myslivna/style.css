@@ -857,7 +857,7 @@ hr { border: 0; border-top: 1px solid #c9b88a; margin: 10px 0; }
 .home-tiles-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6px;
+  gap: 12px 10px;
   margin-bottom: 12px;
 }
 
@@ -865,31 +865,27 @@ hr { border: 0; border-top: 1px solid #c9b88a; margin: 10px 0; }
   display: block;
   overflow: hidden;
   text-decoration: none !important;
-  border: 1px solid #c9b88a;
-  background: #fff;
+  background: transparent;
 }
 
 .home-tile-card img {
   width: 100%;
-  height: auto;
-  max-height: 170px;
-  object-fit: contain;
+  height: 150px;
+  object-fit: cover;
   display: block;
-  background: #fff;
   transition: opacity 0.2s;
 }
 
 .home-tile-card:hover img { opacity: 0.85; }
 
 .home-tile-label {
-  background: #fff;
+  background: transparent;
   color: #3E3E3E;
   font-family: "Times New Roman", Times, Serif;
   font-size: 17px;
   font-weight: bold;
-  padding: 5px 2px;
+  padding: 4px 0 2px;
   text-align: left;
-  border-top: 1px solid #c9b88a;
 }
 
 /* ============================================================
@@ -1015,36 +1011,32 @@ hr { border: 0; border-top: 1px solid #c9b88a; margin: 10px 0; }
 .section-tiles-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6px;
+  gap: 12px 10px;
   margin: 14px 0;
 }
 .section-tile {
   display: block;
   position: relative;
   overflow: hidden;
-  border: 1px solid #c9b88a;
-  background: #ece6cb;
+  background: transparent;
   text-decoration: none;
 }
 .section-tile img {
   width: 100%;
-  height: auto;
-  max-height: 170px;
-  object-fit: contain;
+  height: 150px;
+  object-fit: cover;
   display: block;
-  background: #fff;
   transition: opacity 0.2s;
 }
 .section-tile:hover img { opacity: 0.9; }
 .section-tile-label {
-  padding: 5px 2px;
+  padding: 4px 0 2px;
   font-family: "Times New Roman", Georgia, Times, Serif;
   font-size: 17px;
   font-weight: bold;
   color: #3E3E3E;
   text-align: left;
-  background: #fff;
-  border-top: 1px solid #c9b88a;
+  background: transparent;
 }
 @media (max-width: 820px) {
   .section-tiles-grid { grid-template-columns: 1fr 1fr; }
