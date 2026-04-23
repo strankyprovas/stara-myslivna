@@ -80,19 +80,11 @@
                 </div>
 
                 <?php
-                // Podstránky jako foto dlaždice (jen přímé děti)
+                // Podstránky jako foto dlaždice (jen přímé děti, sub-sub-children se nezobrazují)
                 $children = get_pages([
                     'parent'      => get_the_ID(),
                     'sort_column' => 'menu_order',
                 ]);
-                // Slugy které se NEMAJÍ zobrazovat jako dlaždice (jsou jen v dropdown menu)
-                // Layout O restauraci ukazuje 8 dlaždic, nikoli Historie/Foto pokrmů
-                $tile_exclude = ['historie', 'foto-pokrmu', 'street-view', 'letaky'];
-                if ($children) {
-                    $children = array_filter($children, function($c) use ($tile_exclude) {
-                        return !in_array($c->post_name, $tile_exclude);
-                    });
-                }
                 if ($children) : ?>
                 <div class="ornament">✦</div>
                 <div class="section-tiles-grid">
