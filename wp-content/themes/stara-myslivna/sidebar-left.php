@@ -30,7 +30,7 @@
             <div class="sidebar-block-content">
                 <?php
                 $prov_doba = get_option('myslivna_provozni_doba',
-                    "PO–ČT od 11:00 do 21:00 hod.\nPÁ–SO od 11:00 do 22:00 hod.\nNE od 11:00 do 21:00 hod."
+                    "PO–ČT od 11.00h. do 21.00h.\nPÁ–SO od 11.00h. do 22.00h.\nNE od 11.00h. do 21.00h."
                 );
                 echo '<p>' . nl2br(esc_html($prov_doba)) . '</p>';
                 ?>
@@ -101,7 +101,7 @@
         }
         ?>
         <div class="sidebar-block">
-            <div class="sidebar-block-header">Foto pokrmů</div>
+            <div class="sidebar-block-header">Pokrmy</div>
             <div class="sidebar-block-content" style="padding:0;">
                 <div class="sidebar-slideshow" data-interval="3500">
                     <?php foreach ($pokrmy as $i => $img) : ?>

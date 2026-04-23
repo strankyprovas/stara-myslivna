@@ -62,14 +62,21 @@
             </div>
         </div>
 
-        <!-- Připravujeme -->
+        <!-- Připravujeme (s fotkou Ferdinand piva dle layoutu) -->
         <div class="sidebar-block">
             <div class="sidebar-block-header">Připravujeme</div>
             <div class="sidebar-block-content">
                 <?php
-                $pripravujeme = get_option('myslivna_pripravujeme', 'Informace o připravovaných akcích brzy...');
+                $pripravujeme = get_option('myslivna_pripravujeme',
+                    "Blíží se velikonoce a my již připravujeme bohatou velikonoční nabídku tradičních českých specialit a nápojů"
+                );
                 echo '<p>' . nl2br(esc_html($pripravujeme)) . '</p>';
                 ?>
+                <p style="text-align:center;margin-top:6px;">
+                    <img src="<?php echo esc_url($tpl . '/ferdinand_pivo.jpg'); ?>"
+                         alt="Ferdinand pivo" style="max-width:100%;height:auto;display:block;margin:0 auto;"
+                         onerror="this.style.display='none'">
+                </p>
             </div>
         </div>
 

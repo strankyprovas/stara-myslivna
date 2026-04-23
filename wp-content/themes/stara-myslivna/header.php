@@ -71,11 +71,13 @@
 function myslivna_horiz_nav_fallback() {
     $current_id = get_queried_object_id();
     // Pouze 6 položek navigace dle originálu
-    $nav_slugs = ['o-restauraci','menu','rezervace-on-line','sluzby','akce','shop','kontakty'];
-    $nav_labels = ['O restauraci','Jídelní lístek','Rezervace','Služby','Akce','Shop','Kontakty'];
+    $nav_slugs = ['o-restauraci','menu','menu-skupiny','rezervace-on-line','sluzby','akce','shop','kontakty'];
+    $nav_labels = ['O restauraci','Jídelní lístek','Menu skupiny','Rezervace','Služby','Akce','Shop','Kontakty'];
     echo '<ul class="main-nav-list">';
     foreach ($nav_slugs as $i => $slug) {
-        $page = get_page_by_path($slug);
+        // get_page_by_path vyžaduje full path – pro non-top-level hledáme podle post_name
+        $pages_matching = get_posts(['name'=>$slug,'post_type'=>'page','post_status'=>'publish','numberposts'=>1]);
+        $page = $pages_matching ? $pages_matching[0] : null;
         if (!$page) continue;
         $is_current = ($current_id === $page->ID);
         $is_ancestor = false;
@@ -85,6 +87,10 @@ function myslivna_horiz_nav_fallback() {
         }
         $cls = ($is_current || $is_ancestor) ? ' class="current-menu-item"' : '';
         $children = get_pages(['parent'=>$page->ID,'sort_column'=>'menu_order']);
+        // Vyloučit menu-skupiny z dropdown Jídelní lístek (je separátní top-level)
+        if ($slug === 'menu' && $children) {
+            $children = array_filter($children, function($c) { return $c->post_name !== 'menu-skupiny'; });
+        }
         echo '<li' . $cls . '>';
         echo '<a href="' . get_permalink($page->ID) . '">' . esc_html($nav_labels[$i]) . '</a>';
         if ($children) {
